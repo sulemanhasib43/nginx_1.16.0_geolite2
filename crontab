@@ -1,0 +1,2 @@
+# GeoIPLite2 auto download db every month
+0   12  1-7 *   *   [ "$(date '+\%a')" = "Wed" ] && cd /etc/nginx/ && wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz && tar --strip=1 --wildcards -xvf GeoLite2-Country.tar.gz GeoLite2-Country_*/GeoLite2-Country.mmdb && rm /etc/nginx/GeoLite2-Country.tar.gz
