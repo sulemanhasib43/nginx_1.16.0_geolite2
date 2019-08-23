@@ -16,7 +16,7 @@ RUN set -x \
     && adduser --system --disabled-login --ingroup nginx --no-create-home --gecos "nginx user" --shell /bin/false nginx
 
 # PCRE – Supports regular expressions. Required by the NGINX Core and Rewrite modules. 
-RUN wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.42.tar.gz \
+RUN wget https://ftp.pcre.org/pub/pcre/pcre-8.42.tar.gz \
 	&& tar -zxf pcre-8.42.tar.gz \
 	&& cd pcre-8.42 && ./configure \
 	&& make \
